@@ -1,3 +1,9 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -45,11 +51,13 @@ class LinkedList:
         if new_node.next is None:
             self.tail = new_node
 
+
     def print_list(self):
         current = self.head
         while current:
             print(current.data, end=' -> ')
             current = current.next
+
 
     def print_list_reverse(self):
         current = self.head
@@ -64,21 +72,4 @@ class LinkedList:
             print(stack.pop(), end=' -> ')
 
 
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
 llist = LinkedList()
-
-llist.append(1)
-llist.append(2)
-llist.append(3)
-llist.append(4)
-llist.insert_at_beginning(5)
-llist.insert_at_beginning(6)
-llist.append(7)
-llist.insert_at(40, 6)
-llist.print_list()
-print()
-llist.print_list_reverse()
